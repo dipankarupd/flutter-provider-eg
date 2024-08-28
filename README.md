@@ -1,16 +1,38 @@
-# basics_2
+# Flutter State Management: Providers
 
-A new Flutter project.
+This Flutter project demonstrates state management using the `Provider` package. The application features a simple counter that increments values and displays them across two pages, using a shared state managed by `ChangeNotifier`.
 
-## Getting Started
+## Project Structure
 
-This project is a starting point for a Flutter application.
+- **`main.dart`**: Entry point of the application. Sets up `Provider` with `NumbersProvider` to manage and provide state across the widget tree.
+- **`home.dart`**: The home page of the application. Displays a list of numbers and includes a button to navigate to the `NewPage`.
+- **`new_page.dart`**: A secondary page that also displays the list of numbers and allows the user to add new numbers.
+- **`numbers_provider.dart`**: Contains the `NumbersProvider` class which extends `ChangeNotifier` to manage the list of numbers and notify listeners of changes.
 
-A few resources to get you started if this is your first Flutter project:
+## Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Shared State**: Uses `Provider` to manage and share state across multiple pages.
+- **List Management**: Adds numbers to a list and displays the updated list in real-time.
+- **Navigation**: Allows navigation between the `Home` page and the `NewPage` using Flutter's navigation system.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## How It Works
+
+1. **State Management**:
+
+   - `NumbersProvider` maintains a list of integers and provides an `add()` method to update the list.
+   - The `notifyListeners()` method in `NumbersProvider` ensures that any changes to the list are reflected in the UI.
+
+2. **UI Update**:
+
+   - Both `Home` and `NewPage` use `Consumer<NumbersProvider>` to listen for state changes and rebuild their UI accordingly.
+   - The `FloatingActionButton` on both pages allows users to increment the number in the shared list.
+
+3. **Navigation**:
+   - The `Home` page includes a button to navigate to the `NewPage`.
+   - The `NewPage` features a back button to return to the `Home` page.
+
+![Screenshot 1](assets/images/1.webp)
+![Screenshot 2](assets/images/2.webp)
+![Screenshot 3](assets/images/3.webp)
+![Screenshot 4](assets/images/4.webp)
+![Screenshot 5](assets/images/5.webp)
