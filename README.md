@@ -31,8 +31,14 @@ This Flutter project demonstrates state management using the `Provider` package.
    - The `Home` page includes a button to navigate to the `NewPage`.
    - The `NewPage` features a back button to return to the `Home` page.
 
+## Screenshots
+
 ![Screenshot 1](assets/images/1.webp)
 ![Screenshot 2](assets/images/2.webp)
 ![Screenshot 3](assets/images/3.webp)
 ![Screenshot 4](assets/images/4.webp)
 ![Screenshot 5](assets/images/5.webp)
+
+## Demo video:
+
+[Video](https://drive.google.com/file/d/1dxoZw11r-5i9ENCE1eMCGAEDBI_K4amB/view?usp=sharing)
